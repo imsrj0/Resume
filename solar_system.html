@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html>
+    <title>Solar System</title>
+
+<head>
+  <style>
+body {
+    margin: 50px 0px 0px 150px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    
+    background-color: black;
+    
+    overflow: hidden;
+}
+.container {
+    font-size: 10px;
+    width: 500vh;
+    height: 100vh;
+    position: static;
+}
+.sun {
+    position: absolute;
+    top: 45em;
+    left: 70em;
+    width: 10em;
+    height: 10em;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 3em white;
+   
+}
+.earth,.moon,.mars {
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: 0.2em 0.2em 0 0;
+    border-radius: 50%;
+}
+.earth {
+    top: 34em;
+    left: 59em;
+    
+    width: 32em;
+    height: 31em; 
+    animation: orbit 36.5s linear infinite;   
+}
+.moon {
+    top: 0;
+    right: 0;
+    width: 8em;
+    height: 8em; 
+    animation: orbit 2.7s linear infinite;
+}
+.mars {
+    top: 39em;
+    left: 66em;
+    width: 18em;
+    height: 18em;
+    animation: orbit 40.7s linear infinite;
+}
+.earth::before,
+.moon::before,
+.mars::before
+    {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+.earth::before {
+    top: 2.8em;
+    right: 2.8em;
+    width: 3em;
+    height: 3em;
+    background-color: aqua;    
+}
+.moon::before {
+    top: 0.8em;
+    right: 0.2em;
+    width: 1.2em;
+    height: 1.2em;
+    background-color: silver;
+}
+.mars::before {
+    top: 1.5em;
+    right: 1.5em;
+    width: 2em;
+    height: 2em;
+    background-color: red;
+}
+
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
+    }
+}
+ .star{
+    
+    position:absolute;
+    background-color: white;
+    border-radius: 50%;
+}
+.planet-name {
+    display:block;
+    position: absolute;
+    color: white;
+    font-size: 1.2em;
+}
+.sun:hover::after,
+.earth:hover::after,
+.moon:hover::after,
+.mars:hover::after {
+    content: attr(data-name);
+    position: absolute;
+    color: white;
+    font-size: 1.2em;
+    top: 2.5em; /* change bottom to top and adjust the value */
+    left: 5em;
+    transform: translateX(-50%);
+}
+ 
+  </style>
+</head>
+<body>
+    
+  <div class="container">
+    <div class="sun">
+      <div class="planet-name" data-name="Sun">Sun</div>
+    </div>
+    <div class="earth">
+      <div class="planet-name" data-name="Earth">Earth</div>
+      <div class="moon">
+        <div class="planet-name" data-name="Moon">Moon</div>
+      </div>
+    </div>
+    <div class="mars">
+      <div class="planet-name" data-name="Mars">Mars</div>
+    </div>
+   
+
+
+  <script>
+    function createStars() {
+      const container = document.querySelector('.container');
+      for (let i = 0; i < 400; i++) { // Increase the number of stars to 1000
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.width = '2px';
+        star.style.height = '3px';
+        star.style.top = Math.random() * 100 + '%';
+        star.style.left = Math.random() * 100 + '%';
+        container.appendChild(star);
+      }
+    }
+    createStars();
+  </script>
+</body>
+
+</html>

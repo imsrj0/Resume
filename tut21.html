@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alignment</title>
+    <style>
+        *{
+box-sizing: border-box;
+        }
+        .container{
+            width: 900px;
+            padding: 52px;
+            border-radius:20px ;
+            margin: 12px;
+            border: 3px solid rgb(117, 93, 93);
+            margin: auto;
+            background-color: rgb(64, 174, 207);
+
+        }
+        .item{
+            border: 3px solid grey;
+            margin:12px 3px;
+            padding:12px 3px;
+            border-radius: 20px;
+            background-color:rgb(154, 166, 170) ;
+        }
+        #fruits{
+            float: left;
+            width: 48%;
+        }
+        #Computer{
+            /*float: left;*/
+            width: 97%;
+            clear: left;
+        }
+        #stationary{
+            float: left;
+            width: 48%;     
+        }
+        p, h1{
+           /* text-align: right;
+            text-align: left;
+            text-align: center;*/
+            text-align: justify;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Welocome to my Store</h1>
+     </div>
+    <div class="container">
+
+        <div id="fruits" class="item">
+        <h3>Fruits</h3>
+        <p id="fruitsPara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque possimus eaque dignissimos itaque, illum reprehenderit at nisi qui dolores, modi, adipisci magnam vel ratione ipsum error inventore doloribus dolorum sunt?
+        </p></div>
+        <div id="stationary" class="item">
+        <h3>Stationary</h3>
+        <p id="stationaryPara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque possimus eaque dignissimos itaque, illum reprehenderit at nisi qui dolores, modi, adipisci magnam vel ratione ipsum error inventore doloribus dolorum sunt?
+        </p></div>
+        <div id="Computer" class="item">
+        <h3>Computer</h3>
+        <p id="computerPara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque possimus eaque dignissimos itaque, illum reprehenderit at nisi qui dolores, modi, adipisci magnam vel ratione ipsum error inventore doloribus dolorum sunt?
+        </p></div>
+        <div id="Computer" class="item">
+        <h3>Computer</h3>
+        <p id="computerPara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque possimus eaque dignissimos itaque, illum reprehenderit at nisi qui dolores, modi, adipisci magnam vel ratione ipsum error inventore doloribus dolorum sunt?
+        </p></div>
+        
+    </div>
+</body>
+</html>
